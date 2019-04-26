@@ -35,13 +35,15 @@ int main() {
     root = NULL;
 
     for (int j = 0; j < n; j++) {
-        roofPtr = malloc(sizeof(roofPtr));
-        scanf("%d %d %d %d", &roofPtr->startX, &roofPtr->startY, &roofPtr->endX, &roofPtr->endY);
+        roofPtr = malloc(sizeof(struct roof));
+        scanf("%d %d %d %d", &(roofPtr->startX), &(roofPtr->startY), &(roofPtr->endX), &(roofPtr->endY));
         roofPtr->waterCollected = -1;
 
-        roofPtr->parent = NULL; roofPtr->left = NULL; roofPtr->right = NULL;
+        roofPtr->parent = NULL;
+        roofPtr->left = NULL;
+        roofPtr->right = NULL;
         setKey(roofPtr);
-        insert(roofPtr, root);
+        root = insert(roofPtr, root);
     }
 
     printInOrder(root);
@@ -54,14 +56,14 @@ int main() {
 
 
 /*
- **************    roof methods    ************
+ **************    roof methods    **************
  */
 /**
  * print the data of a roof in an easy to read way
  * @param roof  the roof being printed
  */
 void printRoof (struct roof roof) {
-    printf("(%d, %d), (%d, %d)\n", roof.startX, roof.startY, roof.endX, roof.endY);
+    printf("[key = %d]\t(%d, %d), (%d, %d)\n", roof.key, roof.startX, roof.startY, roof.endX, roof.endY);
 }
 
 /**
@@ -101,8 +103,8 @@ void setKey(struct roof *r){
  */
 struct roof * predecessor (int key, struct roof *root){
     if (root == NULL) return NULL;
-    if (root->key == key) return root;
-    if (key < root->key) return predecessor(key, root->left);
+    //if (root->key == key) return root->left;
+    if (key <= root->key) return predecessor(key, root->left);
     struct roof *t = predecessor(key, root->right);
     return (t != NULL ? t : root); //return t or root
 }
@@ -116,8 +118,8 @@ struct roof * predecessor (int key, struct roof *root){
  */
 struct roof * successor (int key, struct roof *root){
     if (root == NULL) return NULL;
-    if (root->key == key) return root;
-    if (key > root->key) return predecessor(key, root->right);
+    if (root->key == key && root->left->key == key) return root->left;
+    if (key >= root->key) return successor(key, root->right);
     struct roof *t = successor(key, root->left);
     return (t != NULL ? t : root); //return t or root
 }
@@ -134,9 +136,9 @@ struct roof * insert (struct roof *r, struct roof *root) {
         return r;
     }
     if (r->key > root->key)
-        root->left = insert(r, root->right);
+        root->right = insert(r, root->right);
     else
-        root->right = insert(r, root->left);
+        root->left = insert(r, root->left);
 
 }
 
