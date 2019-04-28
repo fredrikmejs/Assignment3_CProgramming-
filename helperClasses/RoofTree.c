@@ -69,17 +69,19 @@ roofTree * insert (roof *r, roofTree *root) {
 
     if (getMax(*r) == root->key) {
         roof *roofPtr = root->list;
-        while (roofPtr->next != NULL){
+        while (roofPtr->next != NULL) {
             roofPtr = roofPtr->next;
         }
         roofPtr->next = r;
+        return root;
     } else if (getMax(*r) > root->key) {
         root->right = insert(r, root->right);
         root->right->parent = root;
-        return
+        return root;
     } else {
         root->left = insert(r, root->left);
         root->left->parent = root;
+        return root;
     }
 
 }
@@ -98,6 +100,7 @@ void printInOrder (roofTree *root){
     struct roof *roofPtr = root->list;
     while (roofPtr != NULL) {
         printRoof(*roofPtr);
+        roofPtr = roofPtr->next;
     }
     printInOrder(successor(root->key, root));
 }

@@ -13,7 +13,7 @@
 
 // roofTree struct
 struct roofTree {
-    struct roof *list;
+    roof *list;
 
     int key;
     struct roofTree *parent, *left, *right;

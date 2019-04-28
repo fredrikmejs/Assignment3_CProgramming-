@@ -20,12 +20,17 @@ int main() {
         roofPtr->waterCollected = -1;
 
 
-        insert(roofPtr, root);
+        root = insert(roofPtr, root);
     }
 
-    printInOrder(root);
-    printf("%s", "\n\n__________________________________\n");
+    printf("%s", "enter a number to continue");
+    scanf("d");
 
+    printf("%s", "\n\n__________________________________\n");
+    printInOrder(root);
+
+    printf("%s", "enter a number to continue");
+    scanf("d");
 
     return 0;
 
