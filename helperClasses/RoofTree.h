@@ -26,5 +26,6 @@ roofTree * successor (int key, roofTree *root);
 roofTree * insert (roof *r, roofTree *root);
 void delete (struct roof *r, roofTree *root);
 void printInOrder (roofTree *root);
+void printInReverse (roofTree *root);
 
 #endif //ASSIGNMENT3_C_ROOFTREE_H

@@ -102,3 +102,14 @@ void printInOrder (roofTree *root){
     }
     printInOrder(successor(root->key, root));
 }
+
+void printInReverse (roofTree *root){
+    if (root == NULL) return;
+    printInReverse(successor(root->key, root));
+    struct roof *roofPtr = root->list;
+    while (roofPtr != NULL) {
+        printRoof(*roofPtr);
+        roofPtr = roofPtr->next;
+    }
+    printInReverse(predecessor(root->key, root));
+}
