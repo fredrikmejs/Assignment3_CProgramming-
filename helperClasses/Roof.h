@@ -1,7 +1,7 @@
 //
 // Created by Bruger on 27-04-2019.
 //
-
+#include <stdbool.h>
 #ifndef ASSIGNMENT3_C_ROOF_H
 #define ASSIGNMENT3_C_ROOF_H
 
@@ -23,6 +23,7 @@ typedef struct roof roof;
 
 //roof methods
 void printRoof(roof roof);
+bool hasNext (roof roof);
 int getMax(roof r);
 
 #endif //ASSIGNMENT3_C_ROOF_H

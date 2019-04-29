@@ -28,7 +28,6 @@
  */
 roofTree * predecessor (int key, roofTree *root){
     if (root == NULL) return NULL;
-    //if (root->key == key) return root;
     if (key <= root->key) return predecessor(key, root->left);
     roofTree *t = predecessor(key, root->right);
     return (t != NULL ? t : root); //return t or root
@@ -43,7 +42,6 @@ roofTree * predecessor (int key, roofTree *root){
  */
 roofTree * successor (int key, roofTree *root){
     if (root == NULL) return NULL;
-    //if (root->key == key && root->left->key == key) return root;
     if (key >= root->key) return successor(key, root->right);
     struct roofTree *t = successor(key, root->left);
     return (t != NULL ? t : root); //return t or root
@@ -68,11 +66,11 @@ roofTree * insert (roof *r, roofTree *root) {
     }
 
     if (getMax(*r) == root->key) {
-        roof *roofPtr = root->list;
-        while (roofPtr->next != NULL) {
-            roofPtr = roofPtr->next;
+        roof *listPtr = root->list;
+        while (hasNext(*listPtr)) {
+            listPtr = listPtr->next;
         }
-        roofPtr->next = r;
+        listPtr->next = r;
         return root;
     } else if (getMax(*r) > root->key) {
         root->right = insert(r, root->right);
