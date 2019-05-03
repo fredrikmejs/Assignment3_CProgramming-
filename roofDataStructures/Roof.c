@@ -13,7 +13,7 @@
  * @param roof  the roof being printed
  */
 void printRoof (roof roof) {
-    printf("[key = %d]\t(%d, %d), (%d, %d)\t\n",  getMax(roof), roof.startX, roof.startY, roof.endX, roof.endY);
+    printf("[key = %d]\t(%d, %d), (%d, %d)\t\n", getMin(roof), roof.startX, roof.startY, roof.endX, roof.endY);
 }
 
 /**
@@ -29,15 +29,15 @@ bool hasNext (roof roof) {
 /**
  * Returns the greatest height of the roof
  */
-int getMax(roof r) {
-    int rMax;
+int getMin(roof r) {
+    int rMin;
 
     if (r.startY > r.endY)
-        rMax = r.startY;
+        rMin = r.endY;
     else
-        rMax = r.endY;
+        rMin = r.startY;
 
 
-    return rMax;
+    return rMin;
 }
 

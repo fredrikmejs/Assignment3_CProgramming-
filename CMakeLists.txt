@@ -3,4 +3,4 @@ project(Assignment3_C C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Assignment3_C Main.c helperClasses/RoofTree.c helperClasses/RoofTree.h helperClasses/Roof.c helperClasses/Roof.h)
+add_executable(Assignment3_C Main.c roofDataStructures/RoofTree.c roofDataStructures/RoofTree.h roofDataStructures/Roof.c roofDataStructures/Roof.h roofDataStructures/waterCalc.h roofDataStructures/waterCalc.c)

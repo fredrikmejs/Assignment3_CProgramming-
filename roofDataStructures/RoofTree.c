@@ -57,7 +57,7 @@ roofTree * insert (roof *r, roofTree *root) {
     if (root == NULL) {
         root = malloc(sizeof(roofTree));
         root->list = r;
-        root->key = getMax(*r);
+        root->key = getMin(*r);
         root->left = NULL;
         root->right = NULL;
         root->parent = NULL;
@@ -65,14 +65,14 @@ roofTree * insert (roof *r, roofTree *root) {
         return root;
     }
 
-    if (getMax(*r) == root->key) {
+    if (getMin(*r) == root->key) {
         roof *listPtr = root->list;
         while (hasNext(*listPtr)) {
             listPtr = listPtr->next;
         }
         listPtr->next = r;
         return root;
-    } else if (getMax(*r) > root->key) {
+    } else if (getMin(*r) > root->key) {
         root->right = insert(r, root->right);
         root->right->parent = root;
         return root;

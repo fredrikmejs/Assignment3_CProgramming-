@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <malloc.h>
-#include "helperClasses/Roof.h"
-#include "helperClasses/RoofTree.h"
-
-
+#include "roofDataStructures/Roof.h"
+#include "roofDataStructures/RoofTree.h"
+#include "roofDataStructures/waterCalc.h"
 
 
 
@@ -19,6 +18,7 @@ int main() {
     for (int j = 0; j < n; j++) {
         roofPtr = malloc(sizeof(struct roof));
         scanf("%d %d %d %d", &(roofPtr->startX), &(roofPtr->startY), &(roofPtr->endX), &(roofPtr->endY));
+        roofPtr->streamCaught = false;
         roofPtr->waterCollected = -1;
         roofPtr->next = NULL;
 

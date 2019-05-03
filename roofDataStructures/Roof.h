@@ -14,6 +14,7 @@ struct roof {
     int endX;
     int endY;
 
+    bool streamCaught;
     int waterCollected;
 
     struct roof  *next;
@@ -24,6 +25,6 @@ typedef struct roof roof;
 //roof methods
 void printRoof(roof roof);
 bool hasNext (roof roof);
-int getMax(roof r);
+int getMin(roof r);
 
 #endif //ASSIGNMENT3_C_ROOF_H
