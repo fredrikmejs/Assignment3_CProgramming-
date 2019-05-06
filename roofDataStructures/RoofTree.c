@@ -30,7 +30,8 @@ roofTree * predecessor (int key, roofTree *root){
     if (root == NULL) return NULL;
     if (key <= root->key) return predecessor(key, root->left);
     roofTree *t = predecessor(key, root->right);
-    return (t != NULL ? t : root); //return t or root
+    roofTree *r = (t != NULL ? t : root); //return t or root
+    return r;
 }
 
 

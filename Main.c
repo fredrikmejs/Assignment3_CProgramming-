@@ -26,11 +26,12 @@ int main() {
         root = insert(roofPtr, root);
     }
 
+    calcWaterForTree(root, root);
 
     printf("%s", "\n\n__________________________________\n");
-    printInOrder(root);
-    printf("%s", "\n\n__________________________________\n");
-    printInReverse(root);
+    for (int i = 0; i < n; i++) {
+        printRoof(*roofOrder[i]);
+    }
 
     int d;
     do {

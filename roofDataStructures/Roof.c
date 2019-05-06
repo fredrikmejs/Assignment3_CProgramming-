@@ -13,7 +13,7 @@
  * @param roof  the roof being printed
  */
 void printRoof (roof roof) {
-    printf("[key = %d]\t(%d, %d), (%d, %d)\t\n", getMin(roof), roof.startX, roof.startY, roof.endX, roof.endY);
+    printf("[key = %d]\t(%d, %d), (%d, %d) water collected: %d\n", getMin(roof), roof.startX, roof.startY, roof.endX, roof.endY, roof.waterCollected);
 }
 
 /**
