@@ -8,8 +8,8 @@ struct LinkedChar {
     struct LinkedChar *next;
 };
 typedef struct LinkedChar LinkedChar;
-
-char changedColor(const char arr[],int size);
+int indexC(const char arr[], int size);
+int changedColor(const char arr[], int size);
 int main() {
 
     FILE *inputFile, *outputFile;
@@ -80,21 +80,32 @@ int main() {
                 outputFilename);
         exit(1);
     } else {
-        fprintf(outputFile, "NECLACE.SOL\n");
-        fprintf(outputFile, arr1);
+        fprintf(outputFile, "NECKLACE.SOL\n");
+        fprintf(outputFile, "%s", arr1);
         fprintf(outputFile, "\n");
-        fprintf(outputFile, arr2);
+        int a = indexC(arr1,sizeArr1);
+        fprintf(outputFile,"%d",changedColor(arr1,sizeArr1));
+        fprintf(outputFile," between ");
+        fprintf(outputFile,"%d",a);
+        fprintf(outputFile," and ");
+        fprintf(outputFile,"%d",(a-1));
+        fprintf(outputFile,"\n");
+        fprintf(outputFile,"\n");
+        fprintf(outputFile, "%s", arr2);
         fprintf(outputFile, "\n");
-        fprintf(outputFile, "%c", changedColor(arr1, sizeArr1));
-        fprintf(outputFile, "\n");
-        fprintf(outputFile, "%c", changedColor(arr2, sizeArr2));
+        int b = indexC(arr2,sizeArr2);
+        fprintf(outputFile,"%d",changedColor(arr2,sizeArr2));
+        fprintf(outputFile," between ");
+        fprintf(outputFile,"%d",b);
+        fprintf(outputFile," and ");
+        fprintf(outputFile,"%d",(b-1));
         fclose(outputFile);
     }
-    return 0;
 
+    return 0;
 }
 
-char changedColor(const char arr[], int size) {
+int indexC(const char arr[], int size){
     int blue = 0, red = 0, maxChainBlue = 0,
             maxChainRed = 0, indexBlue = -1, indexRed = -1;
     char currentColor = arr[0];
@@ -133,15 +144,60 @@ char changedColor(const char arr[], int size) {
             }
         }
     }
-    int blueMinus = indexBlue - 1;
-    int redMinus = indexRed - 1;
 
     if (maxChainBlue > maxChainRed) {
-        char String = printf("%d between %d and %d\n", maxChainBlue, blueMinus, indexBlue);
-        return String;
+        return indexBlue;
     } else {
-        char String = printf("%d between %d and %d\n", maxChainRed, redMinus, indexRed);
-        return String;
+        return indexRed;
+    }
+}
+
+
+int changedColor(const char arr[], int size) {
+    int blue = 0, red = 0, maxChainBlue = 0,
+            maxChainRed = 0, indexBlue = -1, indexRed = -1;
+    char currentColor = arr[0];
+
+
+    for (int i = 0; i < size; ++i) {
+
+        if (currentColor == 'r') {
+            if (arr[i] == 'b' || arr[i] == '@') {
+                blue++;
+            }
+            if (arr[i] == 'r' && blue > 0) {
+                if (maxChainRed < (blue + red)) {
+                    maxChainRed = blue + red;
+                    indexRed = i - blue;
+                }
+                red = 0;
+                currentColor = 'b';
+            }if (arr[i] == 'r') {
+                red++;
+            }
+        } else if (currentColor == 'b') {
+            if (arr[i] == 'r' || arr[i] == '@') {
+                red++;
+            }
+            if (arr[i] == 'b' && red > 0) {
+                if (maxChainBlue < (blue + red)) {
+                    maxChainBlue = blue + red;
+                    indexBlue = i - red;
+                }
+                blue = 0;
+                currentColor = 'r';
+            }
+            if (arr[i] == 'b') {
+                blue++;
+            }
+        }
+    }
+
+    if (maxChainBlue > maxChainRed) {
+        return maxChainBlue;
+    } else {
+
+        return maxChainRed;
     }
 }
 
