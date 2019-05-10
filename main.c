@@ -99,33 +99,37 @@ char changedColor(const char arr[], int size) {
             maxChainRed = 0, indexBlue = -1, indexRed = -1;
     char currentColor = arr[0];
 
+
     for (int i = 0; i < size; ++i) {
+
         if (currentColor == 'r') {
+            if (arr[i] == 'b' || arr[i] == '@') {
+                blue++;
+            }
             if (arr[i] == 'r' && blue > 0) {
                 if (maxChainRed < (blue + red)) {
                     maxChainRed = blue + red;
                     indexRed = i - blue;
-                    red = 0;
-                    currentColor = 'b';
                 }
-            } else if (arr[i] == 'r') {
+                red = 0;
+                currentColor = 'b';
+            }if (arr[i] == 'r') {
                 red++;
-            } else if (arr[i] == 'b' || arr[i] == '@') {
-                blue++;
             }
-        }
-        if (currentColor == 'b') {
+        } else if (currentColor == 'b') {
+            if (arr[i] == 'r' || arr[i] == '@') {
+                red++;
+            }
             if (arr[i] == 'b' && red > 0) {
                 if (maxChainBlue < (blue + red)) {
                     maxChainBlue = blue + red;
                     indexBlue = i - red;
-                    blue = 0;
-                    currentColor = 'r';
                 }
-            } else if (arr[i] == 'b') {
+                blue = 0;
+                currentColor = 'r';
+            }
+            if (arr[i] == 'b') {
                 blue++;
-            } else if (arr[i] == 'r' || arr[i] == '@') {
-                red++;
             }
         }
     }
