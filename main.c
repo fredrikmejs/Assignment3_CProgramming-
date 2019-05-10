@@ -13,11 +13,11 @@ int changedColor(const char arr[], int size);
 int main() {
 
     FILE *inputFile, *outputFile;
-    char *mode = "r";
+
     char outputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.SOL";
     char inputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.DAT";
 
-    inputFile = fopen(inputFilename, mode);
+    inputFile = fopen(inputFilename, "r");
 
     if (inputFile == NULL) {
         fprintf(stderr, "Can't open input file in.list!\n");
