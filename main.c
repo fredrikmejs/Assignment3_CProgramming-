@@ -12,13 +12,17 @@ int indexC(const char arr[], int size);
 int changedColor(const char arr[], int size);
 int main() {
 
+    //File pointer to input- and outputfile
     FILE *inputFile, *outputFile;
 
+
+    //Path and name of the files
     char outputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.SOL";
     char inputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.DAT";
 
     inputFile = fopen(inputFilename, "r");
 
+    //checks if the file is empty
     if (inputFile == NULL) {
         fprintf(stderr, "Can't open input file in.list!\n");
         exit(EXIT_FAILURE);
@@ -74,6 +78,7 @@ int main() {
     }
 
 
+    //Writes to the output file
     outputFile = fopen(outputFilename, "w");
     if (outputFile == NULL) {
         fprintf(stderr, "Can't open output file %s!\n",
@@ -104,7 +109,9 @@ int main() {
 
     return 0;
 }
-
+/*
+ * Runs function to get the index, same as changedColor
+ */
 int indexC(const char arr[], int size){
     int blue = 0, red = 0, maxChainBlue = 0,
             maxChainRed = 0, indexBlue = -1, indexRed = -1;
@@ -152,7 +159,10 @@ int indexC(const char arr[], int size){
     }
 }
 
-
+/*
+ * function to get the longest chain in the necklaces.
+ * The function returns the longest chain.
+ */
 int changedColor(const char arr[], int size) {
     int blue = 0, red = 0, maxChainBlue = 0,
             maxChainRed = 0, indexBlue = -1, indexRed = -1;
