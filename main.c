@@ -7,9 +7,9 @@ struct LinkedChar {
     char ch;
     struct LinkedChar *next;
 };
+
 typedef struct LinkedChar LinkedChar;
-int indexC(const char arr[], int size);
-int changedColor(const char arr[], int size);
+int changedColor(const char arr[], int size, FILE *fileptr);
 int main() {
 
     //File pointer to input- and outputfile
@@ -88,86 +88,26 @@ int main() {
         fprintf(outputFile, "NECKLACE.SOL\n");
         fprintf(outputFile, "%s", arr1);
         fprintf(outputFile, "\n");
-        int a = indexC(arr1,sizeArr1);
-        fprintf(outputFile,"%d",changedColor(arr1,sizeArr1));
-        fprintf(outputFile," between ");
-        fprintf(outputFile,"%d",a);
-        fprintf(outputFile," and ");
-        fprintf(outputFile,"%d",(a-1));
+        changedColor(arr1,sizeArr1,outputFile);
         fprintf(outputFile,"\n");
         fprintf(outputFile,"\n");
         fprintf(outputFile, "%s", arr2);
         fprintf(outputFile, "\n");
-        int b = indexC(arr2,sizeArr2);
-        fprintf(outputFile,"%d",changedColor(arr2,sizeArr2));
-        fprintf(outputFile," between ");
-        fprintf(outputFile,"%d",b);
-        fprintf(outputFile," and ");
-        fprintf(outputFile,"%d",(b-1));
+        changedColor(arr2,sizeArr2,outputFile);
         fclose(outputFile);
     }
 
     return 0;
-}
-/*
- * Runs function to get the index, same as changedColor
- */
-int indexC(const char arr[], int size){
-    int blue = 0, red = 0, maxChainBlue = 0,
-            maxChainRed = 0, indexBlue = -1, indexRed = -1;
-    char currentColor = arr[0];
-
-
-    for (int i = 0; i < size; ++i) {
-
-        if (currentColor == 'r') {
-            if (arr[i] == 'b' || arr[i] == '@') {
-                blue++;
-            }
-            if (arr[i] == 'r' && blue > 0) {
-                if (maxChainRed < (blue + red)) {
-                    maxChainRed = blue + red;
-                    indexRed = i - blue;
-                }
-                red = 0;
-                currentColor = 'b';
-            }if (arr[i] == 'r') {
-                red++;
-            }
-        } else if (currentColor == 'b') {
-            if (arr[i] == 'r' || arr[i] == '@') {
-                red++;
-            }
-            if (arr[i] == 'b' && red > 0) {
-                if (maxChainBlue < (blue + red)) {
-                    maxChainBlue = blue + red;
-                    indexBlue = i - red;
-                }
-                blue = 0;
-                currentColor = 'r';
-            }
-            if (arr[i] == 'b') {
-                blue++;
-            }
-        }
-    }
-
-    if (maxChainBlue > maxChainRed) {
-        return indexBlue;
-    } else {
-        return indexRed;
-    }
 }
 
 /*
  * function to get the longest chain in the necklaces.
  * The function returns the longest chain.
  */
-int changedColor(const char arr[], int size) {
+int changedColor(const char arr[], int size, FILE *filePtr) {
     int blue = 0, red = 0, maxChainBlue = 0,
-            maxChainRed = 0, indexBlue = -1, indexRed = -1;
+    maxChainRed = 0, indexBlue = -1, indexRed = -1;
     char currentColor = arr[0];
-
 
     for (int i = 0; i < size; ++i) {
 
@@ -202,12 +142,13 @@ int changedColor(const char arr[], int size) {
             }
         }
     }
-
+    //The highest chain writes to the file
     if (maxChainBlue > maxChainRed) {
-        return maxChainBlue;
+
+        return fprintf(filePtr,"%d between %d and %d",maxChainBlue,(indexBlue-1),indexBlue);
     } else {
 
-        return maxChainRed;
+        return fprintf(filePtr,"%d between %d and %d",maxChainRed,(indexRed-1),indexRed);
     }
 }
 
