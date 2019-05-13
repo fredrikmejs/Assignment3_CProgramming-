@@ -17,8 +17,8 @@ int main() {
 
 
     //Path and name of the files
-    char outputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.SOL";
-    char inputFilename[] = "C:\\Users\\fredr\\CLionProjects\\OpgaveC3\\NECKLACE.DAT";
+    char outputFilename[] = "..\\resources\\NECKLACE.SOL";
+    char inputFilename[] = "..\\resources\\NECKLACE.DAT";
 
     inputFile = fopen(inputFilename, "r");
 

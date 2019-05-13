@@ -1,3 +1,4 @@
 /cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles/Assignment3_C.dir
 /cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles/Assignment3_1_C.dir
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles/Assignment3_3_C.dir

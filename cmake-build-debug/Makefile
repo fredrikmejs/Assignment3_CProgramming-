@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Assignment3_C
+# Target rules for targets named Assignment3_1_C
 
 # Build rule for target.
-Assignment3_C: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Assignment3_C
-.PHONY : Assignment3_C
+Assignment3_1_C: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Assignment3_1_C
+.PHONY : Assignment3_1_C
 
 # fast build rule for target.
-Assignment3_C/fast:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/build
-.PHONY : Assignment3_C/fast
+Assignment3_1_C/fast:
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/build
+.PHONY : Assignment3_1_C/fast
+
+#=============================================================================
+# Target rules for targets named Assignment3_3_C
+
+# Build rule for target.
+Assignment3_3_C: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Assignment3_3_C
+.PHONY : Assignment3_3_C
+
+# fast build rule for target.
+Assignment3_3_C/fast:
+	$(MAKE) -f CMakeFiles/Assignment3_3_C.dir/build.make CMakeFiles/Assignment3_3_C.dir/build
+.PHONY : Assignment3_3_C/fast
 
 Main1.o: Main1.c.o
 
@@ -129,7 +142,7 @@ Main1.o: Main1.c.o
 
 # target to build an object file
 Main1.c.o:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.o
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/Main1.c.o
 .PHONY : Main1.c.o
 
 Main1.i: Main1.c.i
@@ -138,7 +151,7 @@ Main1.i: Main1.c.i
 
 # target to preprocess a source file
 Main1.c.i:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.i
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/Main1.c.i
 .PHONY : Main1.c.i
 
 Main1.s: Main1.c.s
@@ -147,8 +160,35 @@ Main1.s: Main1.c.s
 
 # target to generate assembly for a file
 Main1.c.s:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.s
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/Main1.c.s
 .PHONY : Main1.c.s
+
+main3.o: main3.c.o
+
+.PHONY : main3.o
+
+# target to build an object file
+main3.c.o:
+	$(MAKE) -f CMakeFiles/Assignment3_3_C.dir/build.make CMakeFiles/Assignment3_3_C.dir/main3.c.o
+.PHONY : main3.c.o
+
+main3.i: main3.c.i
+
+.PHONY : main3.i
+
+# target to preprocess a source file
+main3.c.i:
+	$(MAKE) -f CMakeFiles/Assignment3_3_C.dir/build.make CMakeFiles/Assignment3_3_C.dir/main3.c.i
+.PHONY : main3.c.i
+
+main3.s: main3.c.s
+
+.PHONY : main3.s
+
+# target to generate assembly for a file
+main3.c.s:
+	$(MAKE) -f CMakeFiles/Assignment3_3_C.dir/build.make CMakeFiles/Assignment3_3_C.dir/main3.c.s
+.PHONY : main3.c.s
 
 roofDataStructures/Roof.o: roofDataStructures/Roof.c.o
 
@@ -156,7 +196,7 @@ roofDataStructures/Roof.o: roofDataStructures/Roof.c.o
 
 # target to build an object file
 roofDataStructures/Roof.c.o:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.o
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/Roof.c.o
 .PHONY : roofDataStructures/Roof.c.o
 
 roofDataStructures/Roof.i: roofDataStructures/Roof.c.i
@@ -165,7 +205,7 @@ roofDataStructures/Roof.i: roofDataStructures/Roof.c.i
 
 # target to preprocess a source file
 roofDataStructures/Roof.c.i:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.i
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/Roof.c.i
 .PHONY : roofDataStructures/Roof.c.i
 
 roofDataStructures/Roof.s: roofDataStructures/Roof.c.s
@@ -174,7 +214,7 @@ roofDataStructures/Roof.s: roofDataStructures/Roof.c.s
 
 # target to generate assembly for a file
 roofDataStructures/Roof.c.s:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.s
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/Roof.c.s
 .PHONY : roofDataStructures/Roof.c.s
 
 roofDataStructures/RoofTree.o: roofDataStructures/RoofTree.c.o
@@ -183,7 +223,7 @@ roofDataStructures/RoofTree.o: roofDataStructures/RoofTree.c.o
 
 # target to build an object file
 roofDataStructures/RoofTree.c.o:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/RoofTree.c.o
 .PHONY : roofDataStructures/RoofTree.c.o
 
 roofDataStructures/RoofTree.i: roofDataStructures/RoofTree.c.i
@@ -192,7 +232,7 @@ roofDataStructures/RoofTree.i: roofDataStructures/RoofTree.c.i
 
 # target to preprocess a source file
 roofDataStructures/RoofTree.c.i:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.i
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/RoofTree.c.i
 .PHONY : roofDataStructures/RoofTree.c.i
 
 roofDataStructures/RoofTree.s: roofDataStructures/RoofTree.c.s
@@ -201,7 +241,7 @@ roofDataStructures/RoofTree.s: roofDataStructures/RoofTree.c.s
 
 # target to generate assembly for a file
 roofDataStructures/RoofTree.c.s:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.s
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/RoofTree.c.s
 .PHONY : roofDataStructures/RoofTree.c.s
 
 roofDataStructures/waterCalc.o: roofDataStructures/waterCalc.c.o
@@ -210,7 +250,7 @@ roofDataStructures/waterCalc.o: roofDataStructures/waterCalc.c.o
 
 # target to build an object file
 roofDataStructures/waterCalc.c.o:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.o
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/waterCalc.c.o
 .PHONY : roofDataStructures/waterCalc.c.o
 
 roofDataStructures/waterCalc.i: roofDataStructures/waterCalc.c.i
@@ -219,7 +259,7 @@ roofDataStructures/waterCalc.i: roofDataStructures/waterCalc.c.i
 
 # target to preprocess a source file
 roofDataStructures/waterCalc.c.i:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.i
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/waterCalc.c.i
 .PHONY : roofDataStructures/waterCalc.c.i
 
 roofDataStructures/waterCalc.s: roofDataStructures/waterCalc.c.s
@@ -228,7 +268,7 @@ roofDataStructures/waterCalc.s: roofDataStructures/waterCalc.c.s
 
 # target to generate assembly for a file
 roofDataStructures/waterCalc.c.s:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.s
+	$(MAKE) -f CMakeFiles/Assignment3_1_C.dir/build.make CMakeFiles/Assignment3_1_C.dir/roofDataStructures/waterCalc.c.s
 .PHONY : roofDataStructures/waterCalc.c.s
 
 # Help Target
@@ -238,11 +278,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Assignment3_C"
 	@echo "... edit_cache"
+	@echo "... Assignment3_1_C"
+	@echo "... Assignment3_3_C"
 	@echo "... Main1.o"
 	@echo "... Main1.i"
 	@echo "... Main1.s"
+	@echo "... main3.o"
+	@echo "... main3.i"
+	@echo "... main3.s"
 	@echo "... roofDataStructures/Roof.o"
 	@echo "... roofDataStructures/Roof.i"
 	@echo "... roofDataStructures/Roof.s"
