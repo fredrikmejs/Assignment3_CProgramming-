@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/Roof.h
+stdbool.h
+-
+
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/RoofTree.h
+Roof.h
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/Roof.h
+
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/waterCalc.c
+stdbool.h
+-
+stdio.h
+-
+malloc.h
+-
+Roof.h
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/Roof.h
+RoofTree.h
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/RoofTree.h
+waterCalc.h
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/waterCalc.h
+
+/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/roofDataStructures/waterCalc.h
+stdbool.h
+-
+

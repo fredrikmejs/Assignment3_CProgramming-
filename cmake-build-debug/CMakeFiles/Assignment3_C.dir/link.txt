@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Assignment3_C.dir/Main.c.o CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.o CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.o  -o Assignment3_C.exe -Wl,--out-implib,libAssignment3_C.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
