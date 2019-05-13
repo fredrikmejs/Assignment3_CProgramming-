@@ -123,32 +123,32 @@ Assignment3_C/fast:
 	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/build
 .PHONY : Assignment3_C/fast
 
-Main.o: Main.c.o
+Main1.o: Main1.c.o
 
-.PHONY : Main.o
+.PHONY : Main1.o
 
 # target to build an object file
-Main.c.o:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main.c.o
-.PHONY : Main.c.o
+Main1.c.o:
+	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.o
+.PHONY : Main1.c.o
 
-Main.i: Main.c.i
+Main1.i: Main1.c.i
 
-.PHONY : Main.i
+.PHONY : Main1.i
 
 # target to preprocess a source file
-Main.c.i:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main.c.i
-.PHONY : Main.c.i
+Main1.c.i:
+	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.i
+.PHONY : Main1.c.i
 
-Main.s: Main.c.s
+Main1.s: Main1.c.s
 
-.PHONY : Main.s
+.PHONY : Main1.s
 
 # target to generate assembly for a file
-Main.c.s:
-	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main.c.s
-.PHONY : Main.c.s
+Main1.c.s:
+	$(MAKE) -f CMakeFiles/Assignment3_C.dir/build.make CMakeFiles/Assignment3_C.dir/Main1.c.s
+.PHONY : Main1.c.s
 
 roofDataStructures/Roof.o: roofDataStructures/Roof.c.o
 
@@ -240,9 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Assignment3_C"
 	@echo "... edit_cache"
-	@echo "... Main.o"
-	@echo "... Main.i"
-	@echo "... Main.s"
+	@echo "... Main1.o"
+	@echo "... Main1.i"
+	@echo "... Main1.s"
 	@echo "... roofDataStructures/Roof.o"
 	@echo "... roofDataStructures/Roof.i"
 	@echo "... roofDataStructures/Roof.s"

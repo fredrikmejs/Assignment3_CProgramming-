@@ -57,18 +57,18 @@ include CMakeFiles/Assignment3_C.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Assignment3_C.dir/flags.make
 
-CMakeFiles/Assignment3_C.dir/Main.c.o: CMakeFiles/Assignment3_C.dir/flags.make
-CMakeFiles/Assignment3_C.dir/Main.c.o: ../Main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Assignment3_C.dir/Main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment3_C.dir/Main.c.o   -c "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main.c"
+CMakeFiles/Assignment3_C.dir/Main1.c.o: CMakeFiles/Assignment3_C.dir/flags.make
+CMakeFiles/Assignment3_C.dir/Main1.c.o: ../Main1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Assignment3_C.dir/Main1.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Assignment3_C.dir/Main1.c.o   -c "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main1.c"
 
-CMakeFiles/Assignment3_C.dir/Main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment3_C.dir/Main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main.c" > CMakeFiles/Assignment3_C.dir/Main.c.i
+CMakeFiles/Assignment3_C.dir/Main1.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Assignment3_C.dir/Main1.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main1.c" > CMakeFiles/Assignment3_C.dir/Main1.c.i
 
-CMakeFiles/Assignment3_C.dir/Main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment3_C.dir/Main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main.c" -o CMakeFiles/Assignment3_C.dir/Main.c.s
+CMakeFiles/Assignment3_C.dir/Main1.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Assignment3_C.dir/Main1.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/Main1.c" -o CMakeFiles/Assignment3_C.dir/Main1.c.s
 
 CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o: CMakeFiles/Assignment3_C.dir/flags.make
 CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o: ../roofDataStructures/RoofTree.c
@@ -111,7 +111,7 @@ CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.s: cmake_force
 
 # Object files for target Assignment3_C
 Assignment3_C_OBJECTS = \
-"CMakeFiles/Assignment3_C.dir/Main.c.o" \
+"CMakeFiles/Assignment3_C.dir/Main1.c.o" \
 "CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o" \
 "CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.o" \
 "CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.o"
@@ -119,7 +119,7 @@ Assignment3_C_OBJECTS = \
 # External object files for target Assignment3_C
 Assignment3_C_EXTERNAL_OBJECTS =
 
-Assignment3_C.exe: CMakeFiles/Assignment3_C.dir/Main.c.o
+Assignment3_C.exe: CMakeFiles/Assignment3_C.dir/Main1.c.o
 Assignment3_C.exe: CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o
 Assignment3_C.exe: CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.o
 Assignment3_C.exe: CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.o

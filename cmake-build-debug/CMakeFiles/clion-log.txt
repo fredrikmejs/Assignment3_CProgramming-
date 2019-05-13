@@ -1,4 +1,7 @@
 C:\Users\Bruger\.CLion2018.3\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-"
 -- Configuring done
--- Generating done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  No SOURCES given to target: Assignment3_3_C
+
+
 -- Build files have been written to: /cygdrive/c/Users/Bruger/Google Drev/DTU/2. semester/C_for_javaprogrammoerer/Projects/C_Assignment3/Assignment3_CProgramming-/cmake-build-debug

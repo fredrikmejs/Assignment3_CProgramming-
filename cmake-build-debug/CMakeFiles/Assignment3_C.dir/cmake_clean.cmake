@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Assignment3_C.dir/Main.c.o"
+  "CMakeFiles/Assignment3_C.dir/Main1.c.o"
   "CMakeFiles/Assignment3_C.dir/roofDataStructures/RoofTree.c.o"
   "CMakeFiles/Assignment3_C.dir/roofDataStructures/Roof.c.o"
   "CMakeFiles/Assignment3_C.dir/roofDataStructures/waterCalc.c.o"
